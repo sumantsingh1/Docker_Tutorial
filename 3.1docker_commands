@@ -1,0 +1,19 @@
+| Command                                   | Description                                           |
+| ----------------------------------------- | ----------------------------------------------------- |
+| `docker run -d nginx`                    | Create container in detached / background mode        |
+| `docker ps`                               | List out the running containers                       |
+| `docker run -d -p 80:80 nginx`            | Create a container with port mapping                  |
+| `docker images`                           | List out the Docker images                            |
+| `docker ps -a`                            | List all containers (running + stopped)              |
+| `docker stop <container id>`              | Stop the running container                            |
+| `docker stats`                            | CPU and memory details of running containers          |
+| `docker start <container id>`             | Start a stopped container                             |
+| `docker rm <container id>`                | Remove a stopped container                            |
+| `docker rm -f <container id>`             | Forcefully remove a running container                 |
+| `docker rmi <image id>`                   | Remove the image                                      |
+| `docker rmi -f <image id>`                | Forcefully remove the image                           |
+| `docker rmi $(docker images -q)`          | Remove all Docker images                              |
+| `docker rmi -f $(docker images -q)`       | Forcefully remove all Docker images                   |
+| `docker rm $(docker ps -aq)`              | Remove all containers (running and stopped)           |
+
+
