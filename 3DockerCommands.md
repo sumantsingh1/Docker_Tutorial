@@ -1,4 +1,11 @@
+##Here are the two ways to create and interact with Docker containers:
 
+### 1. Detached Mode (Background)
+```sh
+# Run an Nginx container in detached mode and map port 80 of the host to port 80 of the container
+docker run -d -p 80:80 nginx
+
+```
 #### How to create container
 ```sh
 docker run -d -p 80:80  --name mynginx nginx
