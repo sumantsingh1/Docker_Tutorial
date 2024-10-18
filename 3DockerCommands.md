@@ -6,6 +6,29 @@
 docker run -d -p 80:80 nginx
 
 ```
+### 2. Interactive Mode
+```sh
+# Run an Nginx container interactively and map port 80 of the host to port 80 of the container
+docker run -it -p 80:80 nginx bash
+
+```
+### Exit Interactive Mode Without Stopping the Container:
+```sh
+# Use this key combination to exit the container and leave it running
+ctrl + p + q
+```
+### Re-enter a Running Container:
+```sh
+# Log back into the running container from the Docker host
+docker exec -it <container id> bash
+
+```
+### Run in Detached and Interactive Mode Combined:
+```sh
+# Run an Nginx container in both detached and interactive mode
+docker run -itd -p 80:80 nginx
+```
+
 #### How to create container
 ```sh
 docker run -d -p 80:80  --name mynginx nginx
