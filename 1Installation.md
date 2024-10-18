@@ -36,7 +36,9 @@ https://labs.play-with-docker.com/ # Login using the docker hub
 
 ### Docker Installation (using ec2)
 ```sh
-How to install docker: (Login as ec2-user)
+#How to install docker
+Login as ec2-user
+
 # Install Docker on an Amazon Linux EC2 instance
 sudo yum install docker
 
