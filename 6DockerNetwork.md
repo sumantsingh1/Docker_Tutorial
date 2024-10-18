@@ -1,10 +1,20 @@
 ### Create 2 containers nginx and tomcat
 ```sh
+# Run an Nginx container in detached mode with an interactive terminal
 docker run -itd nginx
+
+# Run a Tomcat container in detached mode with an interactive terminal
 docker run -itd tomcat
+
+# Inspect the default Docker bridge network
 docker network inspect bridge
+
+# Update the package lists for upgrades and new packages
 apt update -y
+
+# Install the `iputils-ping` package for network troubleshooting
 apt install iputils-ping
+
 ```
 
 ### Creating a custom network and adding container to the custom network
