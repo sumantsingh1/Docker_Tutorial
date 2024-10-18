@@ -37,17 +37,38 @@ https://labs.play-with-docker.com/ # Login using the docker hub
 ### Docker Installation (using ec2)
 ```sh
 How to install docker: (Login as ec2-user)
+# Install Docker on an Amazon Linux EC2 instance
 sudo yum install docker
+
+# Check the Docker version (note: daemon is not running)
 docker version # Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+
+# Start the Docker service
 sudo service docker start
+
+# Enable Docker to start at boot
 sudo systemctl enable docker
+
+# List Docker images
 docker image ls # Add the ec2-user to the docker group so you can execute Docker commands without using sudo
+
+# Check group details (confirm docker group exists, and ec2-user is not in the group yet)
 cat /etc/group # docker group present and ec2-user does not present to the group
+
+# Add the ec2-user to the Docker group
 sudo usermod -G docker ec2-user 
+
+# Verify that the ec2-user is now part of the Docker group
 cat /etc/group  # We must see ec2-user belongs to the docker group.
-# Logout of the screen and login again
+
+# Logout and login again for group changes to take effect
+
+# List Docker images again, this time without needing sudo
 docker image ls
+
+# Run an Ubuntu container in detached and interactive mode
 docker run -itd ubuntu
-# Alternative Solution
+
+# Alternative solution: allow non-root users to access Docker by modifying socket permissions
 sudo chmod  666 /var/run/docker.sock
 ```
