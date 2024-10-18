@@ -1,5 +1,5 @@
 | Command                                   | Description                                           |
-| ----------------------------------------- | ----------------------------------------------------- |
+|-------------------------------------------|-------------------------------------------------------|
 | `docker run -d nginx`                    | Create container in detached / background mode        |
 | `docker ps`                               | List out the running containers                       |
 | `docker run -d -p 80:80 nginx`            | Create a container with port mapping                  |
@@ -15,5 +15,3 @@
 | `docker rmi $(docker images -q)`          | Remove all Docker images                              |
 | `docker rmi -f $(docker images -q)`       | Forcefully remove all Docker images                   |
 | `docker rm $(docker ps -aq)`              | Remove all containers (running and stopped)           |
-
-
