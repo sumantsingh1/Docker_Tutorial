@@ -50,8 +50,9 @@ sudo service docker start
 sudo systemctl enable docker
 
 # List Docker images
-docker image ls # Add the ec2-user to the docker group so you can execute Docker commands without using sudo
+docker image ls
 
+# Add the ec2-user to the docker group so you can execute Docker commands without using sudo
 # Check group details (confirm docker group exists, and ec2-user is not in the group yet)
 cat /etc/group # docker group present and ec2-user does not present to the group
 
