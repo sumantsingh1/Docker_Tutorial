@@ -75,16 +75,4 @@ docker run -itd ubuntu
 # Alternative solution: allow non-root users to access Docker by modifying socket permissions
 sudo chmod  666 /var/run/docker.sock
 ```
-### MCQ
-1. What is Docker?
-a) Programming Language
-b) Text Editor
-c) Containerization Platform
-d) Web Server
- 
- 
-2. Which of the following is not a container-based alternative to Docker?
-a) Kubernetes
-b) CoreOS' rkt
-c) Canonical's LXD
-d) Windows Server Containers
+
